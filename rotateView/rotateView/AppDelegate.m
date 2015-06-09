@@ -2,12 +2,12 @@
 //  AppDelegate.m
 //  rotateView
 //
-//  Created by 上金 on 15/6/10.
+//  Created by YXB on 15/6/10.
 //  Copyright (c) 2015年 YXB. All rights reserved.
 //
 
 #import "AppDelegate.h"
-
+#import "ViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -16,6 +16,10 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    ViewController *view = [[ViewController alloc]init];
+    UINavigationController *navc = [[UINavigationController alloc]initWithRootViewController:view];
+    self.window.rootViewController = navc;
+
     // Override point for customization after application launch.
     return YES;
 }
